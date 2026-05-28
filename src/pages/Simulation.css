@@ -1,0 +1,297 @@
+.sim-page { padding: 48px 0 80px; }
+
+.sim-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  gap: 16px;
+}
+
+.sim-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.sim-subtitle {
+  font-size: 14.5px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+/* ── Layout ── */
+.sim-layout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 24px;
+  align-items: start;
+}
+
+/* ── Input panel ── */
+.sim-inputs {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* ── Tabs ── */
+.tab-bar {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: color 0.2s, background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.tab-btn:hover { background: var(--bg-elevated); color: var(--text-primary); }
+
+.tab-btn.active {
+  color: var(--accent-blue);
+  background: rgba(45,156,219,0.06);
+  border-bottom: 2px solid var(--accent-blue);
+}
+
+.tab-count {
+  background: var(--accent-blue);
+  color: #fff;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 1px 7px;
+}
+
+.tab-content { padding: 24px; }
+
+/* ── Presets ── */
+.presets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.preset-btn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text-secondary);
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.18s;
+  text-align: center;
+}
+.preset-btn:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+  background: rgba(45,156,219,0.06);
+}
+
+/* ── Params grid ── */
+.params-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+/* ── Drop zone ── */
+.drop-zone {
+  border: 2px dashed var(--border);
+  border-radius: var(--radius-md);
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+  text-align: center;
+}
+.drop-zone:hover, .drop-zone.drag-over {
+  border-color: var(--accent-blue);
+  background: rgba(45,156,219,0.04);
+}
+
+.drop-icon { margin-bottom: 4px; }
+
+.drop-title {
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--text-primary);
+  word-break: break-all;
+}
+.drop-hint { font-size: 13px; color: var(--text-muted); }
+
+/* ── Schema table ── */
+.schema-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  font-family: var(--font-mono);
+}
+.schema-table th {
+  text-align: left;
+  color: var(--text-muted);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 4px 8px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.schema-table td {
+  padding: 6px 8px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+.schema-table td:first-child { color: var(--accent-teal); }
+
+/* ── Scenario rows ── */
+.scenario-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+.scenario-row:last-child { border-bottom: none; }
+.scenario-name {
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex: 1;
+  min-width: 100px;
+}
+.scenario-hours {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ── Sidebar ── */
+.sim-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: sticky;
+  top: 80px;
+}
+
+.status-card { display: flex; flex-direction: column; gap: 10px; }
+
+.status-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.status-label {
+  font-size: 13px;
+  color: var(--text-secondary);
+}
+.status-value {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--text-primary);
+}
+.status-value.ok   { color: var(--accent-teal); }
+.status-value.warn { color: var(--accent-amber); }
+
+/* ── Rho bar ── */
+.rho-bar-wrap {
+  position: relative;
+  height: 6px;
+  background: var(--bg-base);
+  border-radius: 3px;
+  overflow: visible;
+}
+.rho-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-teal), var(--accent-amber));
+  border-radius: 3px;
+  transition: width 0.4s ease;
+}
+.rho-bar.overflow { background: var(--accent-red); }
+.rho-limit-line {
+  position: absolute;
+  top: -3px;
+  left: 100%;
+  transform: translateX(-1px);
+  width: 2px;
+  height: 12px;
+  background: var(--accent-red);
+  opacity: 0.5;
+  border-radius: 1px;
+}
+
+/* ── Error box ── */
+.error-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: rgba(224,92,92,0.08);
+  border: 1px solid rgba(224,92,92,0.3);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  font-size: 13px;
+  color: var(--accent-red);
+  line-height: 1.55;
+}
+.error-box svg { flex-shrink: 0; margin-top: 2px; }
+
+/* ── Run button ── */
+.run-btn {
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+}
+
+.run-hint {
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+/* ── Spinner ── */
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .sim-layout { grid-template-columns: 1fr; }
+  .sim-sidebar { position: static; }
+}
+@media (max-width: 600px) {
+  .presets-grid { grid-template-columns: 1fr 1fr; }
+  .params-grid  { grid-template-columns: 1fr; }
+}

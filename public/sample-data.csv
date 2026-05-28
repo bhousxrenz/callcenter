@@ -1,0 +1,6 @@
+scenario_name,arrival_rate,service_rate,num_agents,simulation_hours
+Morning Peak,120,20,8,4
+Afternoon,80,20,5,4
+Evening Peak,150,20,10,4
+Night Shift,30,20,3,4
+Weekend Low,50,20,4,8
