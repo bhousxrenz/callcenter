@@ -179,7 +179,7 @@ export function runSimulation({
       totalArrivals,
       totalServed,
       avgWaitMin:    +avgWaitMin.toFixed(2),
-      maxQueueLen,
+      maxQueueLen: maxQLen,
       avgQueueLen:   +avgQueueLen.toFixed(2),
       utilPct:       +utilPct.toFixed(1),
       sla2Min:       +sla2Min.toFixed(1),
