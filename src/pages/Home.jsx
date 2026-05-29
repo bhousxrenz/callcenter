@@ -3,32 +3,32 @@ import './Home.css';
 
 const FEATURES = [
   {
-    icon: '⚡',
+    icon: '',
     title: 'Discrete-Event Engine',
     desc: 'Faithfully simulates each call arrival and departure as individual events in a priority-sorted timeline, giving statistically accurate M/M/c queue dynamics.',
   },
   {
-    icon: '📊',
+    icon: '',
     title: 'Real-Time Metrics',
     desc: 'Track queue length, agent utilization, average wait time, and service-level agreements — updated across the full simulated period.',
   },
   {
-    icon: '📁',
+    icon: '',
     title: 'CSV Data Upload',
     desc: 'Upload your own scenario parameters as a CSV file to batch-run multiple configurations: morning peak, afternoon, evening, and more — all at once.',
   },
   {
-    icon: '📈',
+    icon: '',
     title: 'Visual Analytics',
     desc: 'Interactive charts show queue depth and utilization over time, plus a wait-time distribution histogram to spot bottlenecks at a glance.',
   },
   {
-    icon: '🎯',
+    icon: '',
     title: 'Staffing Recommendations',
     desc: 'Automatically surface insights about under/over-staffing and whether your SLA (answer within 2 minutes) target is being met.',
   },
   {
-    icon: '🔁',
+    icon: '',
     title: 'Reproducible Results',
     desc: 'Every run uses a seeded random-number generator so results can be replicated exactly for reporting and comparison.',
   },
